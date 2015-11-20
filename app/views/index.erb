@@ -1,1 +1,20 @@
-<h1>List of Shows</h1>
+<html>
+  <head>
+    <title>Add Show</title>
+  </head>
+  <body>
+    <h1>List of Shows</h1>
+      <ol>
+        <%@shows.each do |show|%>
+          <li>Title:<%="#{show[0]} (#{show[1]}"%>)</li>
+          <ul>
+            <li>Starting year:<%= show[2]%></li>
+            <li>Synopsis:<%= show[3]%></li>
+            <li>Genre:<%= show[4]%></li>
+          </ul>
+          <%end%>
+      </ol>
+
+    <ul><a href="/television_shows/new">Add Movie</a><ul>
+  </body>
+</html>

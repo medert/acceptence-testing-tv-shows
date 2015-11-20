@@ -1,1 +1,45 @@
-<h1>Add Show Details</h1>
+<html>
+  <head>
+    <title>Add Show</title>
+  </head>
+  <body>
+    <h1>Add Show Details</h1>
+    <ul>
+      <li><%= @error %></li>
+
+    </ul>
+    <form action="/television_shows/new" method="post"
+      <ul>
+        <li>
+          <lable for ="title">Title:</lable>
+          <input type="text" id="title" name="Title"  pattern=".{1,}" required title="Please, enter a show title!">
+        </li>
+        <li>
+          <lable for ="network">Network:</lable>
+          <input type="text" id="network" name="Network" pattern=".{1,}" required title="Please, enter a network!">
+        </li>
+        <li>
+          <lable for ="starting_year">Starting Year:</lable>
+          <input type="text" id="starting_year" name="Starting Year" value="<%= @previous_description %>" pattern=".{1,}" required title="Please, enter a year that show started!">
+        </li>
+        <li>
+          <lable for ="synopsis">Synopsis:</lable>
+          <input type="text" id="synopsis" name="Synopsis"value="<%= @previous_description %>" pattern=".{1,}" required title="Please, enter a movie title!">
+        </li>
+        <li>
+          <lable for ="Genre">Genre:</lable>
+          <select name="Genre" id="genre">
+            <option value="">none</option>
+            <option value="Action">Action</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Drama">Drama</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Fantasy">Fantasy</option>
+          </select>
+        </li>
+          <input type='submit' value="Add TV Show"></input>
+
+      </ul>
+    </form>
+  </body>
+</html>
