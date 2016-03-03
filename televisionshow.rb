@@ -1,5 +1,5 @@
 class TelevisionShow
-  
+
   def initialize(title, network, starting_year, synopsis, genre)
     @title = title
     @network = network
@@ -7,8 +7,4 @@ class TelevisionShow
     @synopsis = synopsis
     @genre = genre
   end
-
-
-
-
 end

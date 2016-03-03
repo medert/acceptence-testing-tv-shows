@@ -19,11 +19,11 @@ end
 
 
 post "/television_shows/new" do
-      @title = params["Title"].to_str
-      @network = params["Network"].to_str
-      @starting_year = params["Starting Year"].to_str
-      @synopsis = params["Synopsis"].to_str
-      @genre = params["Genre"].to_str
+      @title = params["Title"]
+      @network = params["Network"]
+      @starting_year = params["Starting Year"]
+      @synopsis = params["Synopsis"]
+      @genre = params["Genre"]
       @error = "ERROR: The show has already added!"
 
       array = []
